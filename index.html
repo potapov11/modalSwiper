@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LK</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+</head>
+<body>
+
+<!--<button class="showModal" onclick="modalOpen(1)">showModal</button>-->
+
+<div class="modal js-modal modal--active " data-modal-id="1" aria-hidden="true">
+    <div class="modal__wrapper js-modal-close">
+        <div class="modal__body js-modal-no-close modal--active" role="dialog" aria-modal="true">
+            <div class="modal__body-mobile">
+                <span></span>
+            </div>
+            <button class="modal__close js-modal-close-btn" onclick="modalClose(1)">
+                <!--<svg width="28px" height="28px">
+                    <use xlink:href="#close"></use>
+                </svg>-->
+                <img width="28px" height="28px" src="images/close.svg">
+            </button>
+            <div class="modal__content">
+
+                <div class="swiper modal-small">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="images/говядина.png" alt="Photo 1" class="swiper-zoom-target swiper-lazy" loading="lazy">
+                            </div>
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="images/свинина.png" alt="Photo 2" class="swiper-zoom-target swiper-lazy" loading="lazy">
+                            </div>
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-zoom-container">
+                                <img src="images/яйца.png" alt="Photo 3" class="swiper-zoom-target swiper-lazy" loading="lazy">
+                            </div>
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev "></div>
+                    <div class="swiper-button-next "></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
+
+
