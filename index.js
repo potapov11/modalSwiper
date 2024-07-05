@@ -4,43 +4,28 @@ document.addEventListener("DOMContentLoaded", function () {
   function initializeSwiper() {
     const isMobile = window.matchMedia("(max-width: 758px)").matches; // булевое значение(Метод matches возвращает true, если текущая ширина экрана соответствует медиа-запросу, и false в противном случае. )
 
-    const swiper = new Swiper(".swiper", {
-      // Setting default settings
-      grabCursor: true,
+    swiper = new Swiper(".swiper", {
+      speed: 300,
+      slidesPerView: 1,
       centeredSlides: true,
+      centeredSlidesBounds: true,
       loop: true,
-      // Setting minimum and maximum zoom ration
+      lazy: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
       zoom: {
-        maxRatio: 1.2,
-        minRation: 1,
+        maxRatio: 3, // Максимальный зум
+        minRatio: 0, // Минимальный зум
+        enabled: isMobile, // Включаем зум только на мобильных устройствах
+        limitToOriginalSize: true,
       },
     });
-
-    // Use built in zoom.in() and zoom.out() function to scale images
-    // When slide starts to change slideChangeTransitionStart event fires and we use it to scale down the image.
-    swiper.on("slideChangeTransitionStart", swiper.zoom.out);
-    // swiper = new Swiper(".swiper", {
-    //   speed: 300,
-    //   slidesPerView: 1,
-    //   centeredSlides: true,
-    //   centeredSlidesBounds: true,
-    //   loop: true,
-    //   lazy: true,
-    //   pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    //   },
-    //   navigation: {
-    //     nextEl: ".swiper-button-next",
-    //     prevEl: ".swiper-button-prev",
-    //   },
-    //   zoom: {
-    //     maxRatio: 3, // Максимальный зум
-    //     minRatio: 0, // Минимальный зум
-    //     enabled: isMobile, // Включаем зум только на мобильных устройствах
-    //     limitToOriginalSize: true,
-    //   },
-    // });
   }
 
   initializeSwiper();
